@@ -1,0 +1,26 @@
+#alert-box {
+    margin-top: 10px;
+    max-height: 130px !important;
+    min-height: 0px; !important;
+    height: auto;
+    overflow: auto;
+}
+
+.alert {
+    margin: 3px;
+    background-color: #f44336;
+    color: white;
+}
+
+.closebtn {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.closebtn:hover {
+    color: black;
+}

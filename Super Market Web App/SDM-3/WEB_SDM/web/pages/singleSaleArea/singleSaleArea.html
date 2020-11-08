@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <meta charset="UTF-8">
+    <title>Single Sale Area</title>
+    <link rel="icon" href="/WEB_SDM/common/images/storePicture.jpg">
+
+    <script src="../../common/ajaxGoogleapsJquery1110.js"></script>
+    <script src="../../common/netdnaBootsrup311.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../../common/bootstrap.min.css">
+    <script src="../../common/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="singleSellArea.css">
+    <script src="../../common/context-path-helper.js"></script>
+    <script src="../../common/alertBox.js"></script>
+    <link rel="stylesheet" href="../../common/alertsBox.css">
+    <script src="singleSaleArea.js"></script>
+
+</head>
+<body id="body">
+<div id="navBar-placeholder"></div>
+<br><br><br>
+<div id="alert-box"></div>
+<div class="container">
+    <nav class="second-navbar navbar-default navbar-btn" >
+        <div id = "page-second-bar" class=" btn-group btn-group-lg">
+            <div id="customer-buttons" class="row-customer-btn">
+                <button class=" btn btn-lg dropdown-toggle second-navbar-btn-customer" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Make An Order</button>
+                <div class="dropdown-menu ">
+                    <li class="dropdown-button"><a class="dropdown-item second-navbar-btn-customer" href="../makeAnSimpleOrder/makeAnSimpleOrder.html">Simple Order</a></li>
+                    <li class="dropdown-button"><a class="dropdown-item second-navbar-btn-customer" href="../makeSmartOrder/makeSmartOrder.html">Smart Order</a></li>
+                </div>
+                <button id="customer-order-history" class="btn btn-toolbar btn-unique btn-lg  p-demo-3 waves-effect waves-light second-navbar-btn-customer">Order History</button>
+            </div>
+
+            <div id="store-owner-buttons" class="row-storeOwner-btn" >
+                <button id="store-owner-order-history" class="btn btn-unique btn-lg navbar-btn second-navbar-btn-storeOwner">Order History</button>
+                <button id="store-owner-feedbacks" class="btn btn-unique btn-lg navbar-btn second-navbar-btn-storeOwner">Feedbacks</button>
+                <button id="open-new-store" class="btn btn-unique btn-lg navbar-btn second-navbar-btn-storeOwner">Open New Store</button>
+                <button id="add-new-item" class="btn btn-unique btn-lg navbar-btn second-navbar-btn-storeOwner">Add New Item</button>
+            </div>
+        </div>
+    </nav>
+
+</div>
+<br><br>
+<div class="container">
+    <div  class="jumbotron">
+        <h1 class="main-header text-center" id = "welcomeHeader" title="Welcome to Area: ">   Welcome to Area: </h1>
+        <br>
+        <div><button class="mini-block navbar-right" onclick="BackToAllSellAreas()">Back To Sell Areas</button></div>
+    </div>
+
+    <br>
+    <div id="chat-placeholder"></div>
+
+    <br><br>
+    <h3 class="second-header" >The stores in the area </h3>
+    <div id = "stores-div" class="stores">
+        <ol id="stores-list"></ol>
+    </div>
+
+    <br><br>
+    <h3 class="second-header" >The items in the area </h3>
+    <div class="items-table">
+        <table class="table">
+            <thead>
+            <tr class="table-header">
+                <th>Serial Number</th>
+                <th>Name</th>
+                <th>Purchase Method</th>
+                <th>Number Of Stores That Sell</th>
+                <th>Average Price</th>
+                <th>Total Items Have Been Sold</th>
+            </tr>
+            </thead>
+            <tbody id="items-table-body"></tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

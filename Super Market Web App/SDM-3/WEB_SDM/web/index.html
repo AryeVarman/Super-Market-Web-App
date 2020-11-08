@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SDM</title>
+    <link rel="icon" href="/WEB_SDM/common/images/storePicture.jpg">
+
+    <script src="common/jquery-3.5.1.min.js"></script>
+    <script src="pages/index/index.js"></script>
+    <link rel="stylesheet" href="common/bootstrap.min.css">
+    <link rel="stylesheet" href="pages/index/index.css">
+
+</head>
+<body id="body">
+<div class="container">
+    <br><br><br><br>
+        <h1 id = "page-header" class="text-center header"></h1>
+
+
+    <div class="main">
+        <p class="sign" align="center">Sign in</p>
+        <form class="form1 text-center" id = "login-form" method="GET" action="login">
+            <input type="text" id = "user-name-text" name="username" class="un block" placeholder="username"/>
+            <label id = "error-label" class = "center-block"></label>
+            <br>
+            <div class="row radio-button-row text-center">
+                <input  class="radio"  type = "radio" name = "userType" id = "customer" value = "customer" checked = "checked" />
+                <label  class="radio" id = "customer-label" for = "customer" ></label>
+                <input  class="radio" type = "radio" name = "userType" id = "storeOwner" value = "storeOwner" />
+                <label class="radio" id = "store-owner-label" for = "storeOwner"></label>
+            </div>
+            <br/><br/><br/><br/><br/>
+            <input class="submit block" type="button" id = "login-button" value="Login"/>
+            <br/><br/><br/>
+        </form>
+    </div>
+
+<br>
+
+
+</div>
+</body>
+</html>
+
+

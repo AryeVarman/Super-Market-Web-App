@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <meta charset="UTF-8">
+    <title>Add New Store</title>
+    <link rel="icon" href="/WEB_SDM/common/images/storePicture.jpg">
+
+    <link rel="stylesheet" href="../../common/bootstrap.min.css">
+    <script src="../../common/jquery-3.5.1.min.js"></script>
+    <script src="../../common/context-path-helper.js"></script>
+    <script src="addNewStore.js"></script>
+    <script src="../../common/alertBox.js"></script>
+    <link rel="stylesheet" href="../../common/alertsBox.css">
+    <link rel="stylesheet" href="addNewStore.css">
+</head>
+
+<body>
+<div id="navBar-placeholder"></div>
+<br>
+<br>
+<div id="alert-box"></div>
+
+<div class="jumbotron">
+
+    <div class="container text-center">
+        <h1 class="main-header">Add New Store To The Area</h1>
+        <br>
+        <div><button class="mini-block navbar-right" onclick="BackToArea()">Back To Area</button></div>
+    </div>
+</div>
+
+<div id="chat-wrapper">
+    <br>
+    <div id="chat-placeholder"></div>
+    <br>
+</div>
+
+<div id="store-info-div">
+
+    <div id="store-name-div" class="row store-info-div-element">
+        <label for="store-name">Store Name:</label>
+        <input type="text" id="store-name" class="input-info">
+    </div>
+
+
+    <div id="store-ppk-div" class="store-info-div-element">
+        <label for="store-ppk">Store PPK:</label>
+        <input type="number" id = "store-ppk" class="input-info" min="0" required>
+    </div>
+
+
+    <div class="store-info-div-element" id="location-div">
+        <label>Store Location</label>
+        <label for="select-x"></label><select id="select-x" class="selectX">
+        <option value="0">X</option>
+    </select>
+        <label for="select-y"></label><select id="select-y" class="selectY">
+        <option value="0">Y</option>
+    </select>
+    </div>
+
+    <button id="confirm-store-info" class="post-btn center-block">Confirm Store Information</button>
+</div>
+
+<div class="container" id="items-placeholder">
+    <h3 class="second-header">Choose Items For The Store</h3>
+    <br>
+</div>
+
+<br>
+
+<div id = "store-summery-div" class = "text items-table transaction-table">
+    <h3 id="store-summery-info"></h3>
+    <br>
+    <h4 class="second-header">Items In Store:</h4>
+    <table class="table item-in-store-table" id="item-in-store-table">
+        <thead>
+        <tr class="table-header">
+            <th>Item Name</th>
+            <th>Item Serial Number</th>
+            <th>Item Price</th>
+        </tr>
+        </thead>
+        <tbody id="item-in-store-tbody" class = "item-in-store-table"></tbody>
+    </table>
+    <div id="order-summery-btn-div" class="row text-center">
+        <button id="delete-btn" class="order-summery-btn"> Delete And Start Over</button>
+        <button id="confirm-btn" class="order-summery-btn">Open Your Store</button>
+    </div>
+</div>
+
+<div id="addItemToStoreModal" class="modal itemToAddModal">
+    <div class="modal-content addItemModalContent">
+        <span id="close-modal" class="close" onclick="closeModal()">&times;</span>
+        <h4 class=" text-center">Add To Store!</h4>
+        <br>
+        <div id="item-been-choose" class="text-center"></div>
+        <input type="number" id ="price-of-item" min="0" class="center-block" required>
+        <br>
+        <button id="add-to-store-btn" class="add-to-store-btn btn center-block" onclick="addItemToStore()">Add!</button>
+    </div>>
+</div>
+</body>
+</html>

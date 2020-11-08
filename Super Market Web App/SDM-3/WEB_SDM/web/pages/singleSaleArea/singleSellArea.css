@@ -1,0 +1,177 @@
+body {
+    background: lightgoldenrodyellow;
+    color: #e6810c ;
+}
+
+.btn{
+    border-radius: 2px;
+}
+
+.btn-toolbar{
+    margin: 0px 80px;
+}
+.second-navbar{
+    padding-left: 70px;
+
+}
+
+.block {
+    width: 100%;
+    color: #494949 !important;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.block:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+}
+
+.mini-block {
+    color: #494949 !important;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 3px;
+    border: 2px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+.mini-block:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+}
+
+.second-navbar-btn-storeOwner {
+    width: 20%;
+    height: 10%; !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    background: #202020;
+    padding: 10px;
+    border: 3px solid #5f5f5f !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 40px
+}
+
+.second-navbar-btn-storeOwner:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+}
+
+.second-navbar-btn-customer {
+    width: 20%;
+    height: 10%; !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    background: #202020;
+    padding: 10px;
+    border: 3px solid #5f5f5f !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 120px
+}
+
+.second-navbar-btn-customer:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+}
+
+.second-navbar-btn-customer-dropdown-btn{
+    width: 20%;
+    height: 10%; !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    background: #202020;
+    padding: 10px;
+    border: 3px solid #5f5f5f !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 120px
+}
+
+.row-customer-btn{
+    width: 2000px;
+}
+
+.dropdown-item{
+    width: 100%;
+    background: #20202075;
+
+}
+
+.dropdown-item:hover{
+    background: #20202075;
+    color: black !important;
+}
+
+.dropdown-button{
+    width: 400px;
+}
+
+.table-header{
+    background: rgba(246, 185, 59, 0.40);
+    color: #d5541b;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.main-header{
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 40px;
+
+}
+
+.table{
+    background: white;
+}
+
+.table-row:hover{
+    color: #e5800ade !important;
+    background: rgba(246, 185, 59, 0.40);
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    font-weight: bolder;
+}
+
+
+.table-row{
+    background: rgba(246, 185, 59, 0.2);
+}
+
+.second-header{
+    font-weight: bold;
+}
+
+
+.row-storeOwner-btn{
+    width: 1100px;
+}
+
+.second-navbar, .jumbotron{
+    background: rgba(227, 227, 170, 0.5);
+}

@@ -1,0 +1,77 @@
+
+body{
+    color: #e6810c ;
+    background: lightgoldenrodyellow;
+
+}
+
+.block {
+    width: 100%; !important
+    color: #494949 !important;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    font-size: 14px;;
+}
+
+.block:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+}
+
+.table-row-cell-areas:hover{
+    color: #ffffff !important;
+    font-weight: bold;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+
+.table-row-cell{
+    background: rgba(246, 185, 59, 0.2);
+}
+
+
+.table-row-cell-users:hover{
+    font-weight: bold;
+    background: rgba(246, 185, 59, 0.40);
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+}
+
+
+
+.main-header{
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.second-header{
+    font-weight: bold;
+}
+
+.table{
+    background: white;
+}
+
+.table-header{
+    background: rgba(246, 185, 59, 0.40);
+    color: #d5541b;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+/*
+.table:hover{
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+}*/

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <meta charset="UTF-8">
+    <title>Make An Order</title>
+    <link rel="icon" href="/WEB_SDM/common/images/storePicture.jpg">
+
+    <script src="../../common/ajaxGoogleapsJquery1110.js"></script>
+    <script src="../../common/netdnaBootsrup311.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../../common/bootstrap.min.css">
+    <script src="../../common/jquery-3.5.1.min.js"></script>
+    <script src="../../common/context-path-helper.js"></script>
+    <script src="makeSmartOrder.js"></script>
+    <link rel="stylesheet" href="makeSmartOrder.css">
+</head>
+<body>
+<div id="navBar-placeholder"></div>
+
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1 class="main-header">Make A Smart Order</h1>
+        <br>
+        <div><button class="mini-block navbar-right" onclick="BackToArea()">Back To Area</button></div>
+    </div>
+</div>
+
+<div id="chat-wrapper">
+    <br>
+    <div id="chat-placeholder"></div>
+    <br>
+</div>
+
+<div class="navbar-default container second-navbar">
+    <label >date:</label>
+    <input type = "date" id ="order-date" name = "" class="">
+    <label class="delivery-label" >delivery to:</label>
+    <label for="select-x"></label><select id="select-x" class="selectX" onchange="updateDeliveryPrice()">
+    <option value="0">X</option>
+</select>
+    <label for="select-y"></label><select id="select-y" class="selectY" onchange="updateDeliveryPrice()">
+    <option value="0">Y</option>
+</select>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" onclick="openCartModal()"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+    </ul>
+</div>
+<br>
+<br>
+
+<div class="container" id="items-placeholder-smart-order"></div>
+
+<div id="smart-order-cart" class="modal cart-modal container">
+    <div class="modal-dialog modal-dialog-cart">
+        <div class="modal-content pre-scrollable cart-model-content">
+            <span id="close-smart-order-modal" class="close" onclick="cancelCartBtn()">&times;</span>
+
+            <div class="modal-header">
+                <h4 class="text-center cart-header">Your Cart!</h4>
+            </div>
+
+            <br>
+
+            <div id="smart-cart-content" class="items-cart-table modal-body-cart"></div>
+
+            <div class="modal-footer">
+                <div class="row modal-footer-row">
+                    <label class="text-center text cart-footer-text" id="payment-label" totalItemsCost="0">Payment: </label>
+                    <button class="center-block cart-btn" id="cancel-smart-order" onclick="cancelCartBtn()">Cancel</button>
+                    <button class="center-block cart-btn" id="confirm-smart-order">Confirm</button>
+                    <button class="center-block cart-btn" id="delete-smart-order" onclick="deleteOrderBtn()">Delete</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="addItemToCartModal" class="modal itemToAddModal">
+    <!-- Modal content -->
+    <div class="modal-content addItemModalContent">
+        <span id="close-modal" class="close" onclick="closeModal()">&times;</span>
+
+        <h4 class=" text-center">Add To Cart!</h4>
+        <br>
+        <div id="item-been-choose" class="text-center"></div>
+        <input type="number" id = "amount-of-item" min="0" class="center-block" required>
+        <br>
+        <button id="add-to-cart-btn" class="add-to-cart-btn btn center-block" onclick="addItemToCart()">Add!</button>
+    </div>>
+</div>
+
+<div id="cart-modal-placeholder"> </div>
+
+<div id="sale-modal-placeholder"></div>
+
+<div id="sale-modal" class="modal container">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <span id="close-sale-modal" class="close" onclick="closeModal()">&times;</span>
+
+            <h4 class="text-center">Sale!</h4>
+            <br>
+            <h3 id="sale-name" class="text-center"></h3>
+            <br>
+            <div class="container">
+                <label id="sale-trigger-type-text" class="text"></label>
+                <br>
+                <label id="sale-offer-type-text" class="text"></label>
+                <div id="sale-offers-placeholder"></div>
+            </div>
+            <br>
+            <div class="row">
+                <button id="cancel-sale-btn" class="cancel-sale-btn btn center-block">Cancel</button>
+                <button id="add-sale-to-cart-btn" class="add-to-sale-btn btn center-block">Add!</button>
+            </div>
+        </div>>
+    </div>
+</div>
+
+<div id="are-you-sure-modal" class="modal container are-you-sure-modal">
+    <div class="modal-dialog modal-dialog-are-you-sure">
+        <div class="modal-content ">
+            <span id="close-are-you-sure-modal" class="close" onclick="closeModal()">&times;</span>
+
+            <div class="container">
+                <label class="text-center">cancel here and you will lose your order!</label>
+                <br>
+                <label class="text-center">Are you sure you want to do that?</label>
+                <br>
+                <br>
+                <button id="no-are-you-sure-btn" class="no-are-you-sure-btn btn center-block">No</button>
+                <button id="yes-are-you-sure-btn" class="yes-are-you-sure-btn btn center-block">Yes</button>
+            </div>
+        </div>>
+    </div>
+</div>
+
+<div id="are-you-sure-delete-modal" class="modal container are-you-sure-modal">
+    <div class="modal-dialog modal-dialog-are-you-sure">
+        <div class="modal-content ">
+
+            <div class="container are-you-sure">
+                <label class="text-center">Are you sure you want to delete your order?</label>
+                <br>
+                <div class="text-center center-block">
+                    <button id="no-are-you-sure-delete-btn" class="no-are-you-sure-btn btn center-block text-center">No</button>
+                    <button id="yes-are-you-sure-delete-btn" class="yes-are-you-sure-btn btn center-block">Yes</button>
+                </div>
+            </div>
+        </div>>
+    </div>
+</div>
+
+<div id="rate-us-modal" class="modal container are-you-sure-modal">
+    <div class="modal-dialog modal-dialog-are-you-sure">
+        <div class="modal-content">
+
+            <div class="container rate-div">
+                <label class="text-center">Do you want to rate us?</label>
+                <br>
+                <div class="row text-center">
+                    <button id="no-rate-us-btn" class="no-rate-us-btn btn center-block">No</button>
+                    <button id="yes-rate-us-btn" class="yes-rate-us-btn btn center-block">Yes</button>
+                </div>
+            </div>
+        </div>>
+    </div>
+</div>
+
+</body>
+</html>
